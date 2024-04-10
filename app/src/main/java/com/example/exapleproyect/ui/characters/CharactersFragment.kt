@@ -23,5 +23,5 @@ class CharactersFragment : Fragment() {
         return binding.root
     }
 
-    // Este fragmento agregara la informacion de acada personaje
+    // Este fragmento agregara la informacion de cada personaje
 }
