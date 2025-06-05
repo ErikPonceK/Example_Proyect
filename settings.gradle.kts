@@ -25,8 +25,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal() // importante para plugins como kotlin("jvm")
     }
 }
+
 
 rootProject.name = "Example_Proyect" // Corrige el nombre si es necesario
 include(":app")
