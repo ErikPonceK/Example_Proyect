@@ -39,10 +39,12 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
 
       - name: Build, test and analyze with SonarCloud
-        run: ./gradlew build testDebugUnitTest jacocoTestReport sonar \
-          -Dsonar.projectKey=ErikPonceK_Example_Proyect \
-          -Dsonar.organization=erikponcek \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: |
+          ./gradlew build testDebugUnitTest jacocoTestReport sonar \
+            -Dsonar.projectKey=ErikPonceK_Example_Proyect \
+            -Dsonar.organization=erikponcek \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
